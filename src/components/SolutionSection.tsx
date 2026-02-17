@@ -70,45 +70,53 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          {/* SAĞ: Görselleştirme (Dönüşüm Şeması) */}
+          {/* SAĞ: Görselleştirme (Dönüşüm Şeması - GÜNCELLENDİ) */}
           <div className="relative">
              <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 shadow-2xl relative z-10">
-                {/* Adım 1: Kullanıcı */}
-                <div className="flex items-center justify-between mb-8">
-                   <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-700 text-lg">SİZ</div>
-                      <div className="text-left">
+                
+                {/* Adım 1: Kullanıcı (GÜNCELLENDİ) */}
+                <div className="flex items-start justify-between mb-8">
+                   <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center font-bold text-blue-600 text-lg shadow-lg">SİZ</div>
+                      <div>
                          <div className="text-white font-bold">Kredi Kartı</div>
                          <div className="text-slate-400 text-xs">Vade: 40 Gün</div>
                       </div>
                    </div>
                    <div className="text-right">
-                      <div className="text-white font-mono font-bold">- 100.000 TL</div>
+                      {/* Tutar Hizmet Bedeli Dahil Olarak Gösterildi */}
+                      <div className="text-white font-mono font-bold text-lg">- 103.900 TL</div>
+                      <div className="text-[10px] text-orange-400 font-medium mt-1 bg-orange-400/10 px-2 py-0.5 rounded">
+                        (100.000 TL + Hizmet Bedeli)
+                      </div>
                    </div>
                 </div>
 
                 {/* Bağlantı Çizgisi ve KobiPay */}
-                <div className="relative py-4">
-                   <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-600"></div>
-                   <div className="relative z-10 bg-slate-900 border border-slate-600 rounded-xl p-3 flex items-center gap-3 w-max">
-                      <div className="bg-blue-600 p-1.5 rounded text-white font-bold text-xs">KP</div>
+                <div className="relative py-4 pl-6">
+                   {/* Dikey Çizgi */}
+                   <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-slate-600 via-blue-500 to-slate-600 opacity-50"></div>
+                   
+                   {/* KobiPay Kutusu */}
+                   <div className="relative z-10 bg-slate-900 border border-slate-600 rounded-xl p-3 flex items-center gap-3 w-max shadow-lg translate-x-4">
+                      <div className="bg-blue-600 p-1 rounded text-white font-bold text-xs">KP</div>
                       <div className="text-xs text-slate-300">KobiPay Dönüştürücü</div>
                    </div>
                 </div>
 
                 {/* Adım 2: Tedarikçi */}
                 <div className="flex items-center justify-between mt-8">
-                   <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
-                         <Landmark className="w-6 h-6 text-emerald-700" />
+                   <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shadow-lg">
+                         <Landmark className="w-6 h-6 text-emerald-500" />
                       </div>
-                      <div className="text-left">
+                      <div>
                          <div className="text-white font-bold">Tedarikçi</div>
                          <div className="text-slate-400 text-xs">Banka Hesabı (IBAN)</div>
                       </div>
                    </div>
                    <div className="text-right">
-                      <div className="text-emerald-400 font-mono font-bold">+ 100.000 TL</div>
+                      <div className="text-emerald-400 font-mono font-bold text-lg">+ 100.000 TL</div>
                       <div className="text-xs text-slate-500 mt-1">Nakit/Havale</div>
                    </div>
                 </div>
