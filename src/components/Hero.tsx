@@ -1,6 +1,7 @@
 'use client'; // İnteraktif olduğu için şart
 import React, { useState } from 'react';
 import { ShieldCheck, ArrowRight, CheckCircle2, Building2, Loader2, RefreshCcw } from 'lucide-react';
+import WaitingListForm from './WaitingListForm';
 
 export default function Hero() {
   // Animasyon durumlarını yönetmek için state
@@ -51,16 +52,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
-               <div className="flex-1 max-w-md bg-white p-1.5 rounded-full shadow-xl shadow-blue-900/5 border border-slate-200 flex items-center">
-                  <input 
-                    type="email" 
-                    placeholder="E-posta adresiniz..." 
-                    className="pl-6 pr-2 py-3 outline-none w-full rounded-full text-slate-600 placeholder:text-slate-400 bg-transparent"
-                  />
-                  <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition whitespace-nowrap shadow-md">
-                    Haber Ver
-                  </button>
-               </div>
+                  <WaitingListForm />
             </div>
             
             <div className="flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 font-medium">
